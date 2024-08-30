@@ -31,7 +31,7 @@ getgenv().Oasis = {
         },
         ['Prediction'] = {
             ['Default'] = 0.119,
-            ['Ping Interpolation'] = true, -- Auto-Prediction
+            ['Ping Interpolation'] = true, -- Auto-Prediction (Overides all predictions)
             ['Interpolation Interval'] = 0.071
         },
         ['Gun Settings'] = {
@@ -66,7 +66,7 @@ getgenv().Oasis = {
         },
         ['Prediction'] = {
             ['Default'] = 0.119,
-            ['Ping Interpolation'] = true,
+            ['Ping Interpolation'] = true, -- Auto-Prediction (Overides all predictions)
             ['Interpolation Interval'] = 0.071
         },
         ['Gun Settings'] = {
@@ -78,6 +78,29 @@ getgenv().Oasis = {
     ['Trigger-Bot'] = {
         ['Enabled'] = true,
         ['Method'] = 'Drawing', -- Drawing , Part
-        
+        ['Binding'] = {
+            ['Keybind'] = Enum.KeyCode.E,
+            ['Mode'] = 'Hold' -- Toggle , Hold
+        }
+        ['Delay'] = {
+            ['Minimum'] = 0.12,
+            ['Maximum'] = 0.24
+        },
+        ['Prediction'] = {
+            ['Default'] = 0.119,
+            ['Ping Interpolation'] = true, -- Auto-Prediction (Overides all predictions)
+            ['Interpolation Interval'] = 0.071
+        },
+        ['Gun Settings'] = {
+            ['Enabled'] = true,
+            ['Distance Utilization'] = true,
+            ['Pistols'] = {
+                ['Prediction']
+            }
+        }
+    },
+    ['Customization'] = {
+        ['Silent-Aim'] = {},
+        ['Trigger-Bot'] = {}
     }
 }
