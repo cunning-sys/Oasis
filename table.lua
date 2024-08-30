@@ -11,12 +11,12 @@ getgenv().Oasis = {
             ['Close'] = 35,
             ['Middle'] = 65,
             ['Far'] = math.huge
-        }
+        },
         ['Speed Threshold'] = 50
     },
     ['Silent-Aim'] = {
         ['Enabled'] = true,
-        ['Hit Chance'] = 100,
+        ['Hit Chance'] = 100, -- 0 - 100
         ['Binding'] = {
             ['Keybind'] = Enum.KeyCode.P,
             ['Mode'] = 'Toggle' -- Hold , Toggle , Always
@@ -39,7 +39,8 @@ getgenv().Oasis = {
             ['Distance Utilization'] = true,
             ['Pistols'] = {
                 ['Prediction'] = { ['Close'] = 0.119, ['Middle'] = 0.119, ['Far'] = 0.119 },
-                ['Radius'] = { ['Close'] = 20, ['Middle'] = 15, ['Far'] = 10 }
+                ['Radius'] = { ['Close'] = 20, ['Middle'] = 15, ['Far'] = 10 },
+                ['Hit Chance'] = { ['Close'] = 100, ['Middle'] = 100, ['Far'] = 100 }
             },
         }
     },
@@ -54,15 +55,24 @@ getgenv().Oasis = {
             ['Closest Mode'] = {
                 ['Enabled'] = true,
                 ['Mode'] = 'Advanced' -- Simple (Cloesest Part) , Advanced (Closest Point)
-                ['Advanced Scaling'] - 0.93
+                ['Advanced Scaling'] = 0.93
             }
         },
         ['Humanization'] = {
             ['Sensitivity'] = 2,
-            ['Smoothing'] = { ['X'] = 0.35, ['Y'] = 0.5 }
+            ['Smoothing'] = 0.035,
             ['Stutter'] = {
                 ['Enabled'] = false,
             },
+            ['Easing'] = {
+                ['Style'] = Enum.EasingStyle.Circular,
+                ['Direction'] = Enum.EasingDirection.InOut
+            },
+            ['Checks'] = {
+                ['Disable On Third Person'] = true,
+                ['Disable When Not Holding Gun'] = true,
+                ['Disable On Reload'] = true
+            }
         },
         ['Prediction'] = {
             ['Default'] = 0.119,
@@ -72,7 +82,7 @@ getgenv().Oasis = {
         ['Gun Settings'] = {
             ['Enabled'] = true,
             ['Distance Utilization'] = true,
-            ['Pistols'] = {}
+            ['Pistols'] = {},
         }
     },
     ['Trigger-Bot'] = {
@@ -95,7 +105,7 @@ getgenv().Oasis = {
             ['Enabled'] = true,
             ['Distance Utilization'] = true,
             ['Pistols'] = {
-                ['Prediction']
+                ['Prediction'] = { ['Close'] = 0.119, ['Middle'] = 0.119, ['Far'] = 0.119 }
             }
         }
     },
